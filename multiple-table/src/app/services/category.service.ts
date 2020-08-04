@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Category } from '../components/category';
+import { retry, catchError } from 'rxjs/operators';
 
 const baseUrl = 'https://localhost:5001/api/Category';
 @Injectable({

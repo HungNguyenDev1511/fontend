@@ -16,15 +16,13 @@ export class AddCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.addCategory();
   }
-  addCategory(){
+  addCategory() {
     this._service.create(this.category)
       .subscribe(response => {
-        console.log(response);
         this.submitted = true;
       },
-      
-      error => {
-        console.log(error);
-      });
+        error => {
+          console.log(error);
+        });
   }
 }
